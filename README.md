@@ -15,34 +15,46 @@ Run `command here`
 
 ### Frontend container
 
-Run `command here`
+1. At the root of the project, run `cd frontend`
+
+2.Build the container by running this command `docker build -t frontend-kumojin-thomas:dev .`
+
+3. To start the container, run `docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true frontend-kumojin-thomas:dev`
+
+4. Go to localhost:3001
 
 ### Backend container
 
-Run `command here`
+1. At the root of the project, run `cd frontend`
+
+2.Build the container by running this command `docker build -t backend-kumojin-thomas:dev .`
+
+3. To start the container, run `docker run -p 3010:3009 -d backend-kumojin-thomas:dev`
+
+4. Using postman, you can make a request at localhost:\*\*\*\*
 
 ## How to start frontend & backend manually
 
 ### Frontend
 
 1. At the root of the project, run `cd frontend`
-2. Run `yarn`
-3. Run `yarn start`
+2. Run `yarn` or `npm install`
+3. Run `yarn start` or `npm start`
 
 ### Backend
 
 1. At the root of the project, run `cd backend`
-2. Run `yarn`
-3. Run `yarn start`
+2. Run `yarn` or `npm install`
+3. Run `yarn start` or `npm start`
 
 ## How to run the tests
 
 ### Frontend
 
 1. At the root of the project, run `cd frontend`
-2. Run `yarn test`
+2. Run `yarn test` or `npm test`
 
 ### Backend
 
 1. At the root of the project, run `cd backend`
-2. Run `yarn test`
+2. Run `yarn test` or `npm test`

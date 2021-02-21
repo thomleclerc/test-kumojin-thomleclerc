@@ -1,12 +1,12 @@
-FROM node:14
+FROM node:10.16.2-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY . ./
 
-EXPOSE 8080
+EXPOSE 3009
 CMD [ "node", "index.js"]

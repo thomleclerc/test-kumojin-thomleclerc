@@ -1,10 +1,10 @@
-FROM node:10.16.3-alpine
+FROM node:10.16.2-alpine
 
-RUN mkdir -p /src/app
-WORKDIR /src/app
+RUN mkdir -p /app
+WORKDIR /app
 
-COPY package.json ./
-RUN yarn
+COPY package*.json ./
+RUN npm install
 
 COPY . ./
 RUN npm build
