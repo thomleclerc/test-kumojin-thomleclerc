@@ -5,7 +5,6 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import AccessTimeIcon from "@material-ui/icons/AccessTime";
 
 import { useFetch } from "../hooks";
 import { serverTimezoneUrl } from "../common/constants";
@@ -74,7 +73,10 @@ function HomePage() {
       )}
 
       <Container maxWidth="sm">
-        <h1 className="header -md-margin-bottom">Kumojin - Thomas Leclerc</h1>
+        <h1 className="header -md-margin-bottom">
+          <a href="https://kumojin.com/">Kumojin</a> - Thomas Leclerc -
+          20/02/2021
+        </h1>
 
         {/* Improvement : The following code should be another component to facilitate reading. The pages components tend to have a lot of content, but in this particular case, it'll still be decent size. */}
         <div>
@@ -90,10 +92,7 @@ function HomePage() {
             </Grid>
             <Grid item xs={6}>
               <Paper className={classes.paper}>
-                <h4>
-                  <AccessTimeIcon fontSize="small" /> Heure de Tokyo{" "}
-                  <AccessTimeIcon fontSize="small" />
-                </h4>
+                <h4 className="text__spacing">🗻 Heure de Tokyo 🎎</h4>
                 <h5 id="serverDateTime">
                   {serverDateTime || "0000-00-00 00:00:00"}
                 </h5>
@@ -101,10 +100,7 @@ function HomePage() {
             </Grid>
             <Grid item xs={6}>
               <Paper className={classes.paper}>
-                <h4>
-                  <AccessTimeIcon fontSize="small" /> Heure Local{" "}
-                  <AccessTimeIcon fontSize="small" />
-                </h4>
+                <h4>🌎 Heure Local 🌍</h4>
                 <h5 id="localDateTime">
                   {localDateTime || "0000-00-00 00:00:00"}
                 </h5>

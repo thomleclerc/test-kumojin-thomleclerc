@@ -1,5 +1,5 @@
 const router = require("express").Router();
 
-router.get("/tokyo", require("./get.timezone.tokyo.action"));
+router.get("/", require("./get.timezone.action"));
 
 module.exports = router;
