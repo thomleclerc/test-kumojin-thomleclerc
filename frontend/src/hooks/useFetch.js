@@ -15,6 +15,7 @@ const useFetch = (httpRequest, url) => {
       } catch (error) {
         console.error(error);
         setError(error);
+        setIsLoading(false);
       }
     };
     fetchData();

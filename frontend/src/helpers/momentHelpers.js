@@ -1,5 +1,6 @@
 import moment from "moment-timezone";
 
+// Overkill function
 export const getBrowserTimezone = () => {
   return moment.tz.guess();
 };
