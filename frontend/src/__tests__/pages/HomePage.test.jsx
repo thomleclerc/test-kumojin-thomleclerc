@@ -29,16 +29,8 @@ test("renders local & server datetime correctly", () => {
   expect(serverDatetimeElement).toBeInTheDocument();
 });
 
-test("renders spinner when is loading is true", () => {
-  render(<HomePage isLoading={true} />);
-
-  const spinnerElement = screen.getByTestId("spinner");
-
-  expect(spinnerElement).toBeInTheDocument();
-});
-
-test("should not renders spinner when is loading is false", () => {
-  render(<HomePage isLoading={false} />);
+test("renders spinner", () => {
+  render(<HomePage />);
 
   const spinnerElement = screen.getByTestId("spinner");
 

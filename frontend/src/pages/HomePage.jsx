@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function HomePage({ isLoading = false }) {
+function HomePage() {
   const classes = useStyles();
   const [localDateTime, setLocalDateTime] = useState("");
   const [serverDateTime, setServerDateTime] = useState("");
@@ -65,7 +65,7 @@ function HomePage({ isLoading = false }) {
 
   return (
     <>
-      {(isLoadingTimezone || isLoading) && (
+      {isLoadingTimezone && (
         <div className={classes.spinnerRoot} data-testid="spinner">
           <CircularProgress />
         </div>
