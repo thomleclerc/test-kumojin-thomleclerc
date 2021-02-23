@@ -4,7 +4,7 @@ services:
   react-frontend:
     container_name: frontend-kumojin
     build:
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile
     volumes:
       - ".:/app"
@@ -17,7 +17,7 @@ services:
   express-backend:
     container_name: backend-kumojin
     build:
-      context: .
+      context: ./backend
       dockerfile: Dockerfile
     ports:
       - "3009:3009"
