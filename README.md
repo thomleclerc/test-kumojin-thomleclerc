@@ -11,7 +11,9 @@
 
 ### Entire project
 
-Run `command here`
+1. Make sure you are at the root of the project
+
+2. Run `docker-compose up`
 
 ### Frontend container
 
