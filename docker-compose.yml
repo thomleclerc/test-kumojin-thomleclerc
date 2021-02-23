@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  react-frontend:
+    container_name: frontend-kumojin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - "3001:80"
+    environment:
+      - NODE_ENV=development
+
+  express-backend:
+    container_name: backend-kumojin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3009:3009"

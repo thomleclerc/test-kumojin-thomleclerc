@@ -19,7 +19,7 @@ Run `command here`
 
 2.Build the container by running this command `docker build -t frontend-kumojin-thomas:dev .`
 
-3. To start the container, run `docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true frontend-kumojin-thomas:dev`
+3. To start the container, run `docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:80 frontend-kumojin-thomas:dev`
 
 4. Go to localhost:3001
 
@@ -29,9 +29,9 @@ Run `command here`
 
 2.Build the container by running this command `docker build -t backend-kumojin-thomas:dev .`
 
-3. To start the container, run `docker run -p 3010:3009 -d backend-kumojin-thomas:dev`
+3. To start the container, run `docker run -p 3009:3009 -d backend-kumojin-thomas:dev`
 
-4. Using postman, you can make a request at localhost:\*\*\*\*
+4. Using postman, you can make a request at localhost:3009
 
 ## How to start frontend & backend manually
 
